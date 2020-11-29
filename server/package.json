@@ -1,0 +1,44 @@
+{
+  "name": "boiler-plate-version-two",
+  "version": "2.0.0",
+  "description": "boiler plate version two",
+  "main": "index.js",
+  "engine": {
+    "node": "10.16.0",
+    "npm": "6.9.0"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node dist/server.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon src/server.ts",
+    "backend": "nodemon server/index.js",
+    "frontend": "npm run start --prefix client",
+    "dev": "concurrently \"npm run start:dev\" \"cd ../client && npm run start\""
+  },
+  "author": "John ahn",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "helmet": "^3.22.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.4.20",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.2",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.6"
+  }
+}
